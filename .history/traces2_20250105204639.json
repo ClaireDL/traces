@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "traceID": "fa84f745539c8c4ae06b072b7cac7dd9",
+      "spans": [
+        {
+          "traceID": "fa84f745539c8c4ae06b072b7cac7dd9",
+          "spanID": "96ead69cb4e1b4ac",
+          "operationName": "/api/search2/search",
+          "references": [],
+          "startTime": 1734533201711767,
+          "duration": 778502
+        }
+      ]
+    },
+    {
+      "traceID": "fa84f745539c8c4ae06b072b7cac7dd9",
+      "spans": [
+          {
+            "traceID": "fa84f745539c8c4ae06b072b7cac7dd9",
+            "spanID": "96ead69cb4e1b4ac",
+            "operationName": "/api/search2/search",
+            "references": [],
+            "startTime": 1734533201711767,
+            "duration": 778502
+          }
+      ]
+    }
+  ]
+}
