@@ -18,23 +18,27 @@ def get_operation_name(node):
     """ Gets the function name when scanning
     """
     if isinstance(node, dict):
-        if "operationName" in node and "duration" in node:
-            print(node)
+        #if "operationName" in node and "duration" in node:
+            #print(node)
 
         for key, inner_node in node.items():
-            print(key + " : " + str(inner_node))
+            #print(key + " : " + str(inner_node))
             node_operation_name = ""
-            node_duration = ""
+            node_duration = 0
 
             if key == 'operationName' and isinstance(inner_node, str):
-                node_operation_name = inner_node
+                node_operation_name += inner_node
                 print("   FOUND OPERATION_NAME")
+                print(node_operation_name)
+
             if key == 'duration' and isinstance(inner_node, int):
-                node_duration = inner_node
+                node_duration += inner_node
                 print("   FOUND DURATION")
+                print(node_duration)
 
             if node_operation_name != "" and node_duration != "":
-                print("    ", node_operation_name, " ", node_duration)
+                print("condition met")
+                print("", node_operation_name,"", node_duration)
 
             get_operation_name(inner_node)
 
