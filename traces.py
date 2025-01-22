@@ -3,57 +3,36 @@
 import json
 # import pandas as pd
 
-def scan1(node):
-    """ First version that just scans the data structure recursively
+def scan(node):
+    """ Gets the function name when scanning
     """
+    # Checks if node is a dictionary
     if isinstance(node, dict):
-        for key, n in node.items():
-            if key == 'operationName':
-                print(node.get('operationName'))
-            scan1(n)
-
-    elif isinstance(node, list):
-        for n in node:
-            scan1(n)
-
-def scan2(node):
-    """ Second version that does not work: node_operation_name and node_duration are re-initialised
-    before reaching the second key-value pair (key= 'duration')
-    """
-    if isinstance(node, dict):
+        # Checks if the keys of interest are present
         if "operationName" in node and "duration" in node:
-            print(node.get("operationName"), node.get("duration"))
+            # Checks the type of the value for operationName
+            if isinstance(node.get("operationName"), str):
+                # Gets operationName for the node
+                node_operation_name = node.get("operationName")
 
+            # Checks the type of the value for duration
+            if isinstance(node.get("duration"), int):
+                # Gets the duration for the node
+                node_duration = node.get("duration")
+
+            print("operation name: ", node_operation_name, " duration: ", node_duration)
+
+        # Iterates through the values in the dictionary
         for key, inner_node in node.items():
-            print(key + " : " + str(inner_node))
-            node_operation_name = ""
-            node_duration = 0
-
-            print("FOUND OPERATION_NAME ", node_operation_name)
-            if key == 'operationName' and isinstance(inner_node, str):
-                node_operation_name += inner_node
-                node_operation_name = inner_node
-                print("   FOUND OPERATION_NAME")
-                print(node_operation_name)
-
-            if key == 'duration' and isinstance(inner_node, int):
-                node_duration += inner_node
-                print("   FOUND DURATION")
-                print(node_duration)
-
-            if node_operation_name != "" and node_duration is not None:
-                print("FOUND OPERATION_NAME AND DURATION")
-                print("", node_operation_name,"", node_duration)
-
+            # Recursively call
             scan(inner_node)
 
-        if "operationName" in node and "duration" in node:
-            exit(1)
+        # if "operationName" in node and "duration" in node:
+        #     exit(1)
 
     if isinstance(node, list):
         for n in node:
             scan(n)
-
 
 # A function with children has:
 # "hasChildren": true
