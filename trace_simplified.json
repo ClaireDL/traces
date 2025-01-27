@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+        "operationName": "First_level",
+        "duration": 120,
+        "status": true,
+        "children": [
+            {
+                "operationName": "Second_1",
+                "duration": 5,
+                "status": true,
+                "children": [
+                    {
+                        "operationName": "Third-1",
+                        "duration": 2,
+                        "status": true,
+                        "children": []
+                    },
+                    {
+                        "operationName": "Third-3",
+                        "duration": 3,
+                        "status": true,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "operationName": "Second_2",
+                "duration": 15,
+                "status": false,
+                "children": []
+            },
+            {
+                "operationName": "Second_3",
+                "duration": 27,
+                "status": true,
+                "children": []
+            }
+        ]
+    },
+    {
+        "operationName": "First_level_2",
+        "duration": 30,
+        "status": true,
+        "children": []
+    }
+  ]
+}
