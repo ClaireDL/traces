@@ -1,23 +1,23 @@
 {
   "data": [
     {
-        "operationName": "First_level",
+        "operationName": "Trace1-First_level",
         "duration": 120,
         "status": true,
         "children": [
             {
-                "operationName": "Second_1",
+                "operationName": "Trace1-Second_1",
                 "duration": 5,
                 "status": true,
                 "children": [
                     {
-                        "operationName": "Third-1",
+                        "operationName": "Trace1-Third-1",
                         "duration": 2,
                         "status": true,
                         "children": []
                     },
                     {
-                        "operationName": "Third-3",
+                        "operationName": "Trace1-Third-2",
                         "duration": 3,
                         "status": true,
                         "children": []
@@ -25,13 +25,13 @@
                 ]
             },
             {
-                "operationName": "Second_2",
+                "operationName": "Trace1-Second_2",
                 "duration": 15,
                 "status": false,
                 "children": []
             },
             {
-                "operationName": "Second_3",
+                "operationName": "Trace1-Second_3",
                 "duration": 27,
                 "status": true,
                 "children": []
@@ -39,7 +39,51 @@
         ]
     },
     {
-        "operationName": "First_level_2",
+        "operationName": "Trace1-First_level_2",
+        "duration": 30,
+        "status": true,
+        "children": []
+    },
+    {
+        "operationName": "Trace2-First_level",
+        "duration": 120,
+        "status": true,
+        "children": [
+            {
+                "operationName": "Trace2-Second_1",
+                "duration": 5,
+                "status": true,
+                "children": [
+                    {
+                        "operationName": "Trace2-Third-1",
+                        "duration": 2,
+                        "status": true,
+                        "children": []
+                    },
+                    {
+                        "operationName": "Trace2-Third-2",
+                        "duration": 3,
+                        "status": true,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "operationName": "Trace2-Second_2",
+                "duration": 15,
+                "status": false,
+                "children": []
+            },
+            {
+                "operationName": "Trace2-Second_3",
+                "duration": 27,
+                "status": true,
+                "children": []
+            }
+        ]
+    },
+    {
+        "operationName": "Trace2-First_level_2",
         "duration": 30,
         "status": true,
         "children": []
